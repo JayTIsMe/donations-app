@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Donations App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Donation Form 💛</h1>
+
+  <div class="container">
+
+    <div class="form-box">
+      <label>
+        Full Name:
+        <input id="nameInput" type="text" placeholder="Enter your name">
+      </label>
+
+      <label>
+        Email:
+        <input id="emailInput" type="email" placeholder="Enter your email">
+      </label>
+
+      <label>
+        Donation Amount ($):
+        <input id="amountInput" type="number" placeholder="Enter amount">
+      </label>
+
+      <label>
+        Message:
+        <input id="messageInput" type="text" placeholder="Optional message">
+      </label>
+
+      <label>
+        Cause Most Dear to You:
+        <input id="causeInput" type="text" placeholder="e.g. Animal Rescue">
+      </label>
+
+      <button id="submitBtn">Submit Donation</button>
+    </div>
+
+    <div class="output-box">
+      <h2>Thank You Message</h2>
+      <p id="thankYouOutput">Your thank‑you message will appear here.</p>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
