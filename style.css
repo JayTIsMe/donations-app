@@ -1,51 +1,106 @@
-/* Page layout */
+/* Global layout */
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  font-family: "Inter", Arial, sans-serif;
+  background: #f0f2f5;
   margin: 0;
-  padding: 20px;
+  padding: 40px 20px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  color: #333;
 }
 
-/* Container layout */
+/* Main container */
 .container {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 25px;
   width: 100%;
-  max-width: 900px;
+  max-width: 1100px;
 }
 
-/* Form box */
-.form-box {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Output box */
+/* Card-style boxes */
+.form-box,
 .output-box {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  width: calc(50% - 15px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-box:hover,
+.output-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Headings */
+h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
 }
 
 /* Inputs */
-input, textarea {
+input,
+textarea {
   width: 100%;
-  padding: 10px;
+  padding: 14px;
   margin-top: 8px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1px solid #d0d0d0;
   font-size: 16px;
+  background: #fafafa;
+  transition: border 0.2s ease, background 0.2s ease;
 }
 
-textarea {
-  height: 100px;
-  resize: none;
+input:focus,
+textarea:focus {
+  border-color: #0077ff;
+  background: #fff;
+  outline: none;
+}
+
+/* Submit button */
+#submitBtn {
+  width: 100%;
+  padding: 14px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#submitBtn:hover {
+  background: #005fcc;
+}
+
+#submitBtn:active {
+  transform: scale(0.98);
+}
+
+/* Thank-you message */
+#thankYouOutput {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #222;
+}
+
+#thankYouOutput.show {
+  opacity: 1;
+}
+
+/* Reset button */
+#resetBtn {
+  margin-top
