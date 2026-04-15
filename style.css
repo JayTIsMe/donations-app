@@ -103,4 +103,32 @@ textarea:focus {
 
 /* Reset button */
 #resetBtn {
-  margin-top
+  margin-top: 20px;
+  padding: 14px;
+  width: 100%;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  display: none;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#resetBtn:hover {
+  background: #222;
+}
+
+#resetBtn:active {
+  transform: scale(0.98);
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .form-box,
+  .output-box {
+    width: 100%;
+  }
+}
